@@ -24,6 +24,15 @@ const resolvers = {
       return favMovie;
     },
   },
+  Mutation: {
+    createUser: (parent, args) => {
+      const user = args.input;
+      const lastId = UserData[UserData.length - 1].id;
+      user.id = lastId + 1;
+      UserData.push(user);
+      return user;
+    },
+  },
 };
 
 module.exports = resolvers;

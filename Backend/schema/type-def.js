@@ -54,6 +54,17 @@ const typeDef = gql`
     Moriah_Stanton
   }
 
+  input UserInput {
+    id: ID
+    name: String!
+    age: Int!
+    username: Username! = Delphine
+  }
+
+  type Mutation {
+    createUser(input: UserInput!): User!
+  }
+
   type Query {
     users: [User!]!
     user(id: ID!): User!
