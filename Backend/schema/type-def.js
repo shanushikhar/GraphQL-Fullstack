@@ -55,14 +55,20 @@ const typeDef = gql`
   }
 
   input UserInput {
-    id: ID
     name: String!
     age: Int!
     username: Username! = Delphine
   }
 
+  input Updateuser {
+    id: ID!
+    updateWebsite: String!
+  }
+
   type Mutation {
     createUser(input: UserInput!): User!
+    updateUser(input: Updateuser!): User!
+    deleteUser(id: ID!): User
   }
 
   type Query {

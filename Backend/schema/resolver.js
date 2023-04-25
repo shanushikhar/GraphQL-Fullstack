@@ -32,6 +32,21 @@ const resolvers = {
       UserData.push(user);
       return user;
     },
+    updateUser: (parent, args) => {
+      const { id, updateWebsite } = args.input;
+      const user = UserData.find((user) => user.id === +id);
+      user.website = updateWebsite;
+      return user;
+    },
+    deleteUser: (parent, args) => {
+      const id = args.id;
+
+      const user = UserData.findIndex((user) => user.id === +id);
+      UserData.splice(user, 1);
+
+      //   _.remove(UserData, (user) => user.id === Number(id));
+      return null;
+    },
   },
 };
 
