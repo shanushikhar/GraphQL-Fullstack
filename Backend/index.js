@@ -123,4 +123,22 @@ in variable =>
     "age":12
   }
 }
+
+7> update user
+mutation updateUser($input: Updateuser!){
+  updateUser(input: $input) {
+    id
+    name
+    username
+    website
+    age
+  }
+}
+in variable =>
+{
+  "input": {
+    "id": "2",
+    "updateWebsite": "hoho2"
+  }
+}
  */
