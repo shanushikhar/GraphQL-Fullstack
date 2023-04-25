@@ -1,10 +1,26 @@
-const data = [
+const UserData = [
   {
     id: 1,
     name: "Leanne Graham",
     age: 12,
     username: "Bret",
     email: "Sincere@april.biz",
+    friends: [
+      {
+        id: 1,
+        name: "Chelsey Dietrich",
+        age: 34,
+        username: "Kamren",
+        email: "Lucio_Hettinger@annie.ca",
+      },
+      {
+        id: 2,
+        name: "Ervin Howell",
+        age: 14,
+        username: "Antonette",
+        email: "Shanna@melissa.tv",
+      },
+    ],
     address: {
       street: "Kulas Light",
       suite: "Apt. 556",
@@ -77,6 +93,22 @@ const data = [
     age: 32,
     username: "Karianne",
     email: "Julianne.OConner@kory.org",
+    friends: [
+      {
+        id: 3,
+        name: "Ervin Howell",
+        age: 14,
+        username: "Antonette",
+        email: "Shanna@melissa.tv",
+      },
+      {
+        id: 5,
+        name: "Chelsey Dietrich",
+        age: 34,
+        username: "Kamren",
+        email: "Lucio_Hettinger@annie.ca",
+      },
+    ],
     address: {
       street: "Hoeger Mall",
       suite: "Apt. 692",
@@ -147,7 +179,7 @@ const data = [
     id: 7,
     name: "Kurtis Weissnat",
     age: 43,
-    username: "Elwyn.Skiles",
+    username: "Elwyn_Skiles",
     email: "Telly.Hoeger@billy.biz",
     address: {
       street: "Rex Trail",
@@ -219,7 +251,7 @@ const data = [
     id: 10,
     name: "Clementina DuBuque",
     age: 18,
-    username: "Moriah.Stanton",
+    username: "Moriah_Stanton",
     email: "Rey.Padberg@karina.biz",
     address: {
       street: "Kattie Turnpike",
@@ -241,4 +273,31 @@ const data = [
   },
 ];
 
-module.exports = data;
+const Movies = [
+  {
+    id: 1,
+    name: "Avenger",
+    released: true,
+    yor: 2019,
+  },
+  {
+    id: 2,
+    name: "Avatar",
+    released: true,
+    yor: 2023,
+  },
+  {
+    id: 1,
+    name: "The Marvel",
+    released: false,
+    yor: 2024,
+  },
+  {
+    id: 1,
+    name: "Rocky",
+    released: true,
+    yor: 2012,
+  },
+];
+
+module.exports = { UserData, Movies };

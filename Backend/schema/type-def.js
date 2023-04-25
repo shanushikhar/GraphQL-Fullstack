@@ -1,39 +1,63 @@
 const { gql } = require("apollo-server");
 
 const typeDef = gql`
-  type geo {
+  type Geo {
     lat: String!
     lng: String!
   }
 
-  type address {
+  type Address {
     street: String!
     suite: String!
     city: String
     zipcode: String
-    geo: geo
+    geo: Geo
   }
 
-  type company {
+  type Company {
     name: String!
     catchPhrase: String!
     bs: String
   }
 
-  type user {
+  type User {
     id: ID!
     name: String!
     age: Int!
-    username: String!
+    username: Username!
     email: String!
     phone: String
-    website: String!
-    address: address
-    company: company
+    website: String
+    address: Address
+    company: Company
+    friends: [User]
+    favoritesMovie: [Movies]!
+  }
+
+  type Movies {
+    id: ID!
+    name: String!
+    released: Boolean!
+    yor: Int
+  }
+
+  enum Username {
+    Bret
+    Antonette
+    Samantha
+    Karianne
+    Kamren
+    Leopoldo_Corkery
+    Elwyn_Skiles
+    Maxime_Nienow
+    Delphine
+    Moriah_Stanton
   }
 
   type Query {
-    users: [user!]!
+    users: [User!]!
+    user(id: ID!): User!
+    userByName(name: String!): User!
   }
 `;
 
