@@ -106,4 +106,21 @@ in variable =>
 {
   "name": "Ervin Howell"
 }
+
+6> Create User
+mutation createUser($input: UserInput!){
+ createUser(input: $input) {
+   id
+   name
+   age
+   username
+ }
+}
+in variable => 
+{
+  "input": {
+    "name":"test",
+    "age":12
+  }
+}
  */
